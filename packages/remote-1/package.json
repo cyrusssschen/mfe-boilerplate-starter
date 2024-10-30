@@ -1,5 +1,5 @@
 {
-  "name": "host",
+  "name": "remote-1",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -10,14 +10,10 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "@module-federation/bridge-react": "^0.6.12",
     "@module-federation/enhanced": "^0.6.11",
-    "@module-federation/retry-plugin": "^0.6.12",
     "@module-federation/rsbuild-plugin": "^0.0.2",
-    "path": "^0.12.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.0",

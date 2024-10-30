@@ -1,9 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { init, preloadRemote } from '@module-federation/enhanced/runtime';
+import retryPlugin from './runtime-plugin/retry';
+import offLineRemotePlugin from './runtime-plugin/offline-remote';
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
-root.render(
+init({
+  name: 'host',
+  remotes: [
+    { name: 'provider', entry: 'http://localhost:3099/mf-manifest.json', alias: 'provider' }
+  ],
+  plugins: [
+    // retryPlugin(), 
+    offLineRemotePlugin()
+  ]
+});
+
+preloadRemote([{
+  nameOrAlias: 'provider',
+  exposes: ['Button']
+}]);
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
