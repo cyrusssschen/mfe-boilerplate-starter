@@ -9,7 +9,6 @@ export default defineConfig({
     pluginReact(),
     pluginModuleFederation({
       name: 'host',
-      filename: 'remoteEntry.js',
       // remotes: {
       //   provider: 'provider@http://localhost:3099/mf-manifest.json',
       // },

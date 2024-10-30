@@ -10,6 +10,7 @@ init({
   remotes: [
     { name: 'provider', entry: 'http://localhost:3099/mf-manifest.json', alias: 'provider' }
   ],
+  shareStrategy: 'loaded-first',
   plugins: [
     // retryPlugin(), 
     offLineRemotePlugin()

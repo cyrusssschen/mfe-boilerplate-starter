@@ -4,7 +4,10 @@ import './App.css';
 import Button from 'provider/button';
 
 const RemoteButton = lazy(() => loadRemote<{default: typeof Button}>(
-  'provider/button', {from: 'runtime'}
+  'provider/button', 
+  {
+    from: 'runtime'
+  }
 ) as Promise<{default: typeof Button}>);
 
 const App = () => {
