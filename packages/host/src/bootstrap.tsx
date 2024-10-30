@@ -11,6 +11,10 @@ init({
     { name: 'provider', entry: 'http://localhost:3099/mf-manifest.json', alias: 'provider' }
   ],
   shareStrategy: 'loaded-first',
+  shared: {
+    'react': {},
+    'react-dom': {}
+  },
   plugins: [
     // retryPlugin(), 
     offLineRemotePlugin()
